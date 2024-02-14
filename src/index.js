@@ -362,7 +362,7 @@ class SmartConnectionsPlugin extends Plugin {
   // test API key
   async test_api_key() {
     const req = {
-      url: `https://api.openai.com/v1/embeddings`,
+      url: `https://oa.api2d.net/v1/embeddings`,
       method: "POST",
       body: JSON.stringify({ model: "text-embedding-ada-002", input: "test" }),
       headers: { "Content-Type": "application/json", "Authorization": `Bearer ${this.settings.api_key}` },
