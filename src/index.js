@@ -10,7 +10,7 @@ const {
   TFile,
 } = require("obsidian");
 // const { ObsidianAJSON } = require("smart-collections"); // NPM
-const { ObsidianAJSON } = require("../smart-collections/ObsidianAJSON.js"); // Local
+const { ObsidianAJSON } = require("../node_modules/smart-collections/ObsidianAJSON.js"); // Local
 const { SmartBrain } = require("./smart_connections");
 const { default_settings } = require("./default_settings");
 const { SmartView } = require("./SmartView");
@@ -362,7 +362,7 @@ class SmartConnectionsPlugin extends Plugin {
   // test API key
   async test_api_key() {
     const req = {
-      url: `https://oa.api2d.net/v1/embeddings`,
+      url: `https://openai.api2d.net/v1/embeddings`,
       method: "POST",
       body: JSON.stringify({ model: "text-embedding-ada-002", input: "test" }),
       headers: { "Content-Type": "application/json", "Authorization": `Bearer ${this.settings.api_key}` },

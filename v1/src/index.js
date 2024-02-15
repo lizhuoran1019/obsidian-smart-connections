@@ -932,7 +932,7 @@ class SmartConnectionsPlugin extends Obsidian.Plugin {
     };
     // console.log(this.settings.api_key);
     const reqParams = {
-      url: `https://oa.api2d.net/v1/embeddings`,
+      url: `https://openai.api2d.net/v1/embeddings`,
       method: "POST",
       body: JSON.stringify(usedParams),
       headers: {
@@ -3067,7 +3067,7 @@ class SmartConnectionsChatView extends Obsidian.ItemView {
       const full_str = await new Promise((resolve, reject) => {
         try {
           // console.log("stream", opts);
-          const url = "https://oa.api2d.net/v1/chat/completions";
+          const url = "https://openai.api2d.net/v1/chat/completions";
           this.active_stream = new ScStreamer(url, {
             headers: {
               "Content-Type": "application/json",
@@ -3132,7 +3132,7 @@ class SmartConnectionsChatView extends Obsidian.ItemView {
     }else{
       try{
         const response = await (0, Obsidian.requestUrl)({
-          url: `https://oa.api2d.net/v1/chat/completions`,
+          url: `https://openai.api2d.net/v1/chat/completions`,
           method: "POST",
           headers: {
             Authorization: `Bearer ${this.plugin.settings.api_key}`,

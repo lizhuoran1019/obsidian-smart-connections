@@ -1,7 +1,7 @@
 // const { Brain, Collection, CollectionItem } = require("smart-collections"); // NPM
-const { Brain } = require("../smart-collections/Brain"); // local
-const { Collection } = require("../smart-collections/Collection"); // local
-const { CollectionItem } = require("../smart-collections/CollectionItem"); // local
+const { Brain } = require("../node_modules/smart-collections/Brain"); // local
+const { Collection } = require("../node_modules/smart-collections/Collection"); // local
+const { CollectionItem } = require("../node_modules/smart-collections/CollectionItem"); // local
 const { SmartMarkdown } = require("smart-chunks"); // NPM
 // const { SmartMarkdown } = require("../smart-chunks/smart-chunks"); // local
 const { script: web_script } = require('smart-embed/web_connector.json');
@@ -12,7 +12,7 @@ const {
   SmartEmbedOpenAIAdapter, 
   SmartEmbed,
 // } = require('smart-embed');
-} = require('../smart-embed/smart_embed');
+} = require('../node_modules/smart-embed/smart_embed');
 class SmartBrain extends Brain {
   constructor(main, ltm_adapter) {
     super(ltm_adapter);
